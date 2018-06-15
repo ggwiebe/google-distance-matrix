@@ -1,7 +1,7 @@
 var distance = require('./index.js');
 
-var origins = ['San Francisco CA', '40.7421,-73.9914'];
-var destinations = ['New York NY', 'Montreal', '41.8337329,-87.7321554', 'Honolulu'];
+var origins = ['132 Hampton Ave, Toronto, ON'];
+var destinations = ['150 York Street', '630 Queen St E, Toronto, ON M4M 1G3'];
 
 function onMatrix(err, distances) {
     if (err) {
@@ -37,21 +37,13 @@ function onMatrix(err, distances) {
 distance.units('imperial');
 
 // TRANSIT example
-
 distance.mode('transit');
-
 distance.transit_mode('train');
-
 distance.transit_routing_preference('fewer_transfers');
-
 distance.matrix(origins, destinations, onMatrix);
 
 // DRIVING example
-
 distance.mode('driving');
-
 distance.traffic_model('optimistic');
-
 distance.departure_time(1513362478);
-
 distance.matrix(origins, destinations, onMatrix);

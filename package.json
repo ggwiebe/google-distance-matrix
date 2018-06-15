@@ -27,6 +27,7 @@
   "homepage": "https://github.com/ecteodoro/google-distance-matrix",
   "dependencies": {
     "debug": "^2.1.0",
+    "mongodb": "^3.0.7",
     "qs-google-signature": "^1.1.1",
     "request": "^2.36.0"
   }
